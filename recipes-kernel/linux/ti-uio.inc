@@ -17,7 +17,7 @@ KERNEL_DEVICETREE_append_ti33x = "${@base_conditional("ENABLE_TI_UIO_DEVICES", "
 KERNEL_DEVICETREE_append_ti43x = "${@base_conditional("ENABLE_TI_UIO_DEVICES", "1", " am437x-idk-pru-excl-uio.dtb", "", d)}"
 
 do_setup_uio() {
-    if [ "${ENABLE_TI_UIO_DEVICES}" == "1" ]
+    if [ "${ENABLE_TI_UIO_DEVICES}" = "1" ]
     then
         for dtsi in ${DTSI_LIST}
         do
@@ -33,7 +33,7 @@ do_setup_uio() {
 
 do_setup_uio_append_am57xx-evm() {
 
-    if [ "${ENABLE_TI_UIO_DEVICES}" == "1" ]
+    if [ "${ENABLE_TI_UIO_DEVICES}" = "1" ]
     then
         dts="am572x-idk-pru-excl-uio.dts"
         dtsi="am572x-pru-uio.dtsi"
