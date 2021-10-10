@@ -16,7 +16,7 @@ DTSI_LIST:append:k2l = " k2l-uio.dtsi"
 DTSI_LIST:append:k2e = " k2e-uio.dtsi"
 
 do_setup_uio() {
-    if [ "${ENABLE_TI_UIO_DEVICES}" == "1" ]
+    if [ "${ENABLE_TI_UIO_DEVICES}" = "1" ]
     then
         for dtsi in ${DTSI_LIST}
         do
@@ -32,7 +32,7 @@ do_setup_uio() {
 
 do_setup_uio:append:dra7xx() {
 
-    if [ "${ENABLE_TI_UIO_DEVICES}" == "1" ]
+    if [ "${ENABLE_TI_UIO_DEVICES}" = "1" ]
     then
         dtsi="am57xx-pru-uio.dtsi"
         cp ${WORKDIR}/${dtsi} ${S}/arch/arm/boot/dts/
