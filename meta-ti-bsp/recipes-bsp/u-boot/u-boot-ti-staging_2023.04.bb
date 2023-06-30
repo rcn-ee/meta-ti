@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
 
 PR = "r0"
 
-BRANCH = "ti-u-boot-2023.04"
+BRANCH = "ti-u-boot-2023.04-next"
 
-SRCREV = "9ed6d8935d9aaca9507cbcc820833a2a238ac980"
+SRCREV = "abfedd0e079d9c24b3b8b7f136e3e25968f09297"
 
 do_install:append:am62xx() {
 	install -d ${D}/boot
